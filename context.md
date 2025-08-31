@@ -1,7 +1,9 @@
 ## slide 1
 
 slide_bg: assets/bg1.png
+
 slide_layout: title slide
+
 title: The Fall of Lytro
 
 ---
@@ -9,8 +11,11 @@ title: The Fall of Lytro
 ## slide 2
 
 slide_bg: assets/bg2.png
+
 slide_layout: title and content
+
 title: AGENDA
+
 content:
     The Genesis
     What is Light-Field Photography?
@@ -18,6 +23,7 @@ content:
     The Cracks begin to Show
     The Second Attempt
     The Pivot and the End
+
 font_color: #fff
 
 ---
@@ -25,7 +31,9 @@ font_color: #fff
 ## slide 3
 
 slide_bg: assets/bg3.png
+
 slide_layout: section header
+
 title: The Genesis
 
 ---
@@ -33,9 +41,13 @@ title: The Genesis
 ## slide 4
 
 slide_bg: assets/bg8.png
+
 slide_layout: two content
+
 title: The Genesis
+
 content1: assets/ren_ng.png
+
 content2:
     Founded in 2006 by Ren Ng, a Stanford PhD student
     Ng's research focused on light-field photography, which captures information about the direction and intensity of light rays in a scene
@@ -48,7 +60,9 @@ content2:
 ## slide 5
 
 slide_bg: assets/bg3.png
+
 slide_layout: section header
+
 title: What is Light-Field Photography?
 
 ---
@@ -56,8 +70,11 @@ title: What is Light-Field Photography?
 ## slide 6
 
 slide_bg: assets/bg6.png
+
 slide_layout: title and content
+
 title: What is Light-Field Photography?
+
 content:
     Conventional cameras capture a 2D representation of a 3D scene by recording the intensity and color of light rays that hit a flat sensor
     Light-field cameras capture not only the color and intensity of light but also the direction of every single light ray in a scene
@@ -70,7 +87,9 @@ content:
 ## slide 7
 
 slide_bg: assets/bg3.png
+
 slide_layout: section header
+
 title: The Hype and the First Product
 
 ---
@@ -78,9 +97,13 @@ title: The Hype and the First Product
 ## slide 8
 
 slide_bg: assets/bg8.png
+
 slide_layout: two content
+
 title: The Hype and the First Product
+
 content1: assets/lytro_first_gen_grey.png
+
 content2:
     Lytro emerged from stealth mode in 2011 to immense media fanfare, promising "Shoot now, focus later"
     In 2012, Lytro released its first product: the Lytro Light Field Camera
@@ -94,7 +117,9 @@ content2:
 ## slide 9
 
 slide_bg: assets/bg3.png
+
 slide_layout: section header
+
 title: The Cracks Begin to Show
 
 ---
@@ -102,8 +127,11 @@ title: The Cracks Begin to Show
 ## slide 10
 
 slide_bg: assets/bg10.png
+
 slide_layout: title and content
+
 title: The Cracks Begin to Show
+
 content:
     Despite initial excitement, the first Lytro camera was a commercial disappointment due to several critical issues:
     Abysmal Image Quality: The final exported image was only 1.2 megapixels, unsuitable for printing and lower quality than many smartphones
@@ -117,7 +145,9 @@ content:
 ## slide 11
 
 slide_bg: assets/bg3.png
+
 slide_layout: section header
+
 title: The Second Attempt
 
 ---
@@ -125,8 +155,11 @@ title: The Second Attempt
 ## slide 12
 
 slide_bg: assets/bg12.png
+
 slide_layout: two content
+
 title: The Second Attempt
+
 content1:
     In 2014, Lytro released the Lytro Illum, a more advanced light-field camera aimed at professional photographers
     The Illum featured a more conventional DSLR-like design with a larger sensor and better optics
@@ -134,6 +167,7 @@ content1:
     The camera included advanced features such as manual controls, RAW image capture, and a larger touchscreen for editing
     However, the Illum was priced at $1,599, making it significantly more expensive than other professional cameras
     Despite the improvements, the Illum still struggled to gain traction in the market due to lingering issues with image quality and usability
+
 content2: assets/lytro_illum_on_surface.jpg
 
 ---
@@ -141,7 +175,9 @@ content2: assets/lytro_illum_on_surface.jpg
 ## slide 13
 
 slide_bg: assets/bg3.png
+
 slide_layout: section header
+
 title: The Pivot and the End
 
 ---
@@ -149,9 +185,13 @@ title: The Pivot and the End
 ## slide 14
 
 slide_bg: assets/bg14.png
+
 slide_layout: two content
+
 title: The Pivot and the End
+
 content1: assets/lytro_immerge.jpg
+
 content2:
     In 2015, Lytro attempted to pivot towards the virtual reality (VR) market, leveraging its light-field technology for VR content creation
     The company released the Lytro VR camera, designed to capture immersive 3D environments for VR applications
@@ -165,8 +205,11 @@ content2:
 ## slide 15
 
 slide_bg: assets/bg14.png
+
 slide_layout: title and content
+
 title: The Pivot and the End
+
 content:
     Innovation Alone is Not Enough: Groundbreaking technology must also deliver practical value and usability to succeed in the market
     Market Timing Matters: Entering a market too early or without a clear demand can hinder adoption and growth
@@ -179,8 +222,11 @@ content:
 ## slide 16
 
 slide_bg: assets/bg16.png
+
 slide_layout: title slide
+
 title: Thank You
+
 font_color: #fff
 
 ---

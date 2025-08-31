@@ -1,8 +1,4 @@
 """Generate a PowerPoint from `context.md` using slide_bg images as slide backgrounds.
-
-Usage: python generate_presentation.py
-
-Creates `output.pptx` in the repo root.
 """
 
 from pathlib import Path
@@ -124,21 +120,18 @@ def set_title(slide, title_text: str, font_color: str = None):
     if not title_text:
         return
 
-    # Try the standard title placeholder first
     title_shape = None
     try:
         title_shape = slide.shapes.title
     except Exception:
         title_shape = None
 
-    # If there is no direct title placeholder, try to find one by name (contains 'title')
     if title_shape is None or not getattr(title_shape, "has_text_frame", False):
         cand = None
         min_top = None
         for shp in slide.shapes:
             if not getattr(shp, "has_text_frame", False):
                 continue
-            # prefer placeholders named like 'Title'
             try:
                 name = (shp.name or "").lower()
             except Exception:
@@ -146,7 +139,6 @@ def set_title(slide, title_text: str, font_color: str = None):
             if "title" in name:
                 cand = shp
                 break
-            # otherwise pick the top-most text shape as a title candidate
             try:
                 t = getattr(shp, "top", None)
                 if t is not None:
@@ -157,7 +149,6 @@ def set_title(slide, title_text: str, font_color: str = None):
                 pass
         title_shape = cand
 
-    # Final fallback: any text-containing shape
     if title_shape is None:
         for shp in slide.shapes:
             if getattr(shp, "has_text_frame", False):
@@ -169,16 +160,13 @@ def set_title(slide, title_text: str, font_color: str = None):
 
     parsed_color = parse_hex_color(font_color)
 
-    # Set the title text and apply consistent styling (single run)
     try:
         tf = title_shape.text_frame
         tf.clear()
-        # build a single paragraph and run so we can control styling exactly
         try:
             p = tf.paragraphs[0]
             # remove existing runs
             while len(p.runs) > 0:
-                # there is no direct remove, so reset text and recreate
                 p.text = ""
                 break
             r = p.add_run()
@@ -228,6 +216,16 @@ def set_body_text(slide, body_text: str, font_color: str = None):
                 p.text = line.strip()
                 p.font.size = Pt(18)
                 try:
+                    p.font.name = "Segoe UI"
+                except Exception:
+                    pass
+                try:
+                    # always set run font name; apply color if provided
+                    for run in p.runs:
+                        try:
+                            run.font.name = "Segoe UI"
+                        except Exception:
+                            pass
                     if parsed_color is not None:
                         for run in p.runs:
                             run.font.color.rgb = parsed_color
@@ -242,6 +240,15 @@ def set_body_text(slide, body_text: str, font_color: str = None):
         p.text = line.strip()
         p.font.size = Pt(18)
         try:
+            p.font.name = "Segoe UI"
+        except Exception:
+            pass
+        try:
+            for run in p.runs:
+                try:
+                    run.font.name = "Segoe UI"
+                except Exception:
+                    pass
             if parsed_color is not None:
                 for run in p.runs:
                     run.font.color.rgb = parsed_color
@@ -257,8 +264,6 @@ def add_two_content(
     font_color: str = None,
 ):
     """Place left_content and right_content into left/right placeholders if available.
-
-    Requirement: force 14pt font for text placed in those placeholders. Images preserve aspect ratio.
     """
     title_shape = None
     title_text = None
@@ -356,6 +361,15 @@ def add_two_content(
                     p.text = line.strip()
                     p.font.size = Pt(font_pt)
                     try:
+                        p.font.name = "Segoe UI"
+                    except Exception:
+                        pass
+                    try:
+                        for run in p.runs:
+                            try:
+                                run.font.name = "Segoe UI"
+                            except Exception:
+                                pass
                         if parsed_color is not None:
                             for run in p.runs:
                                 run.font.color.rgb = parsed_color
@@ -402,9 +416,17 @@ def add_two_content(
             p.text = line.strip()
             p.font.size = Pt(14)
             try:
+                p.font.name = "Segoe UI"
+            except Exception:
+                pass
+            try:
                 if parsed_color is not None:
                     for run in p.runs:
                         run.font.color.rgb = parsed_color
+                        try:
+                            run.font.name = "Segoe UI"
+                        except Exception:
+                            pass
             except Exception:
                 pass
 
@@ -417,9 +439,17 @@ def add_two_content(
             p.text = line.strip()
             p.font.size = Pt(14)
             try:
+                p.font.name = "Segoe UI"
+            except Exception:
+                pass
+            try:
                 if parsed_color is not None:
                     for run in p.runs:
                         run.font.color.rgb = parsed_color
+                        try:
+                            run.font.name = "Segoe UI"
+                        except Exception:
+                            pass
             except Exception:
                 pass
 
